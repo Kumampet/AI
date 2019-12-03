@@ -1,0 +1,109 @@
+# Explanation of modified points (required)
+/**
+
+ * @brief Function for not operator.
+
+ * @param x The input value.
+
+ * @return The output value.
+
+*/
+
+
+static bool logic_func_not(bool x)
+{
+
+    // TODO: 1. Write logical operation,
+
+	return !x;
+
+}
+
+
+
+
+/**
+
+ * @brief Function for and operator.
+
+ * @param x The first input value.
+
+ * @param y The second input value.
+
+ * @return The output value.
+
+*/
+
+
+static bool logic_func_and(bool x, bool y)
+{
+
+    // TODO: 2. Write logical operation,
+
+	return x & y;
+
+}
+
+
+
+
+/**
+
+ * @brief Function for or operator.
+
+ * @param x The first input value.
+
+ * @param y The second input value.
+
+ * @return The output value.
+ 
+*/
+
+
+static bool logic_func_or(bool x, bool y)
+{
+
+    // TODO: 3. Write logical operation,
+
+	return x | y;
+
+}
+
+
+
+
+/**
+
+ * @brief Function for implication operator.
+
+ * @param x The first input value.
+
+ * @param y The second input value.
+
+ * @return The output value.
+ 
+*/
+
+
+static bool logic_func_imp(bool x, bool y)
+{
+
+    // TODO: 4. Write logical operation,
+
+	return logic_func_or(logic_func_not(x),y);
+
+}
+
+
+
+
+
+# Discussion (if needed)
+
+
+
+
+# Comments (if needed)
+
+
+

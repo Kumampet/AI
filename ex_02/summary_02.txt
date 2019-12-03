@@ -1,0 +1,29 @@
+# Explanation of modified points (required)
+ // TODO: 1. Set the arguments in order to start DFS.
+    dfs_visit(g,vertex_states, g->vertex_starting_search);
+    putchar('\n');
+     // TODO: 2. Change the current vertex state.
+    vertex_states[current_vertex] = VISITED/*-------*/;
+    // TODO: 3. If the i-th vertex is not visited yet and the current vertex is connected to it, visit the i-th vertex recursively.
+        if ((vertex_states[i] == UNVISITED) && (g->adjacent_matrix[i][current_vertex] == CONNECTED) ) {
+            dfs_visit(g, vertex_states, i);
+        }
+    // TODO: 4. Set the argument to start BFS.
+    // Set start vertex to begin searching.
+    s_queue_enqueue(g->vertex_starting_search);
+    // TODO: 5. Set the state of the starting vertex to begin search.
+    // The starting vertex is in the queue and it state should be visited.
+    vertex_states[g->vertex_starting_search] = VISITED;
+    // TODO: 6. If the i-th vertex is not visited yet and the current vertex is connected to it, append it to the queue.
+            if ((vertex_states[i] == UNVISITED) && (g->adjacent_matrix[i][current_vertex] == CONNECTED) ) {
+                vertex_states[i] = VISITED;
+                s_queue_enqueue(i);
+            }
+
+# Discussion (if needed)
+
+
+# Comments (if needed)
+
+
+

@@ -1,0 +1,33 @@
+# Explanation of modified points (required)
+ // TODO: 1. Set the arguments in order to start DFS.
+    float cost = dfs_visit(g, vertex_states, g->vertex_starting_search, 0.0);
+
+// TODO: 2. Write the terminating condition for the recursive search.
+    if (current_vertex == g->vertex_end_search) {
+        return accumulate_cost;
+    }
+
+// TODO: 3. Call dfs_visit recursively.
+            // Note: Cost of the child = cost of the edge + accumulate cost.
+            //       Also, pay attention to the return value.
+            /*----------------------------------------------------------------------------------------------------*/;
+			accumulate_cost = dfs_visit(g, vertex_states, current_vertex, g->edge_costs[current_vertex][i]);
+
+// TODO: 4. Write the terminating condition for the search.
+        if (current_vertex == g->vertex_end_search) {
+            break;
+        }
+
+// TODO: 5. Calculate the accumulate cost.
+                // Set accumulate cost from the starting vertex to the i-th child vertex.
+                accumulate_costs[i] = accumulate_costs[i] + g->adjacent_matrix[current_vertex][i];
+
+
+
+# Discussion (if needed)
+
+
+# Comments (if needed)
+
+
+
